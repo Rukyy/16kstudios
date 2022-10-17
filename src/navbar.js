@@ -1,11 +1,39 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
+
 const NavBar = () => {
+    const [state, setstate]=useState(null)
+    const book=useRef(null)
+    const btn=useRef(null)
+    useEffect(()=>{
+      setstate(true)
+      const show=()=>{
+        if (book['current'].className=='booknow'){
+          book['current'].className='booknow-show'
+        }else{book['current'].className='booknow'}
+        // alert('alert')
+
+      }
+      btn['current'].addEventListener('click',show)
+
+      
+    },[state])
 
     return (
         <nav className="navbar">
             <section className="top-nav">
-                <div>
-                    <h2><i className="fa-solid fa-camera"></i>16kstudio</h2>
+                <div className="logo">
+                    <i className="fa-solid fa-camera"></i>16kstudio
+                </div>
+                <button ref={btn}>Book Now!!!</button>
+                <div ref={book} className="booknow">
+                  <ul>
+                    <li><i className="fa-brands fa-whatsapp"></i> whatsapp</li>
+                    <li><a href="https://instagram.com/16k_studios?igshid=YmMyMTA2M2Y="> <i class="fa-brands fa-instagram"></i> instagram</a></li>
+                    <li><i class="fa-solid fa-phone"></i> call/text</li>
+                    <li><i class="fa-solid fa-envelope"></i>Mail</li>
+                  </ul>
                 </div>
                 <input id="menu-toggle" type="checkbox" />
                 <label className='menu-button-container' htmlFor="menu-toggle">
