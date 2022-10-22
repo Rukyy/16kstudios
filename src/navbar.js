@@ -9,7 +9,7 @@ const NavBar = () => {
     useEffect(()=>{
       setstate(true)
       const show=()=>{
-        if (book['current'].className=='booknow'){
+        if (book['current'].className==='booknow'){
           book['current'].className='booknow-show'
         }else{book['current'].className='booknow'}
         // alert('alert')
@@ -25,16 +25,20 @@ const NavBar = () => {
             <section className="top-nav">
                 <div className="logo">
                     <i className="fa-solid fa-camera"></i>16kstudio
+                    {/* <img src="/photos/pic 222.png" alt="" /> */}
                 </div>
-                <button ref={btn}>Book Now!!!</button>
-                <div ref={book} className="booknow">
-                  <ul>
-                    <li><i className="fa-brands fa-whatsapp"></i> whatsapp</li>
-                    <li><a href="https://instagram.com/16k_studios?igshid=YmMyMTA2M2Y="> <i class="fa-brands fa-instagram"></i> instagram</a></li>
-                    <li><i class="fa-solid fa-phone"></i> call/text</li>
-                    <li><i class="fa-solid fa-envelope"></i>Mail</li>
-                  </ul>
+                <div className="ff">
+                  <button ref={btn} className='bookbtn'>Book Now!!!</button>
+                  <div ref={book} className="booknow">
+                    <ul>
+                      <li><i className="fa-brands fa-whatsapp"></i> whatsapp</li>
+                      <li><a href="https://instagram.com/16k_studios?igshid=YmMyMTA2M2Y="> <i className="fa-brands fa-instagram"></i> instagram</a></li>
+                      <li><a href="tel:08068635849"><i className="fa-solid fa-phone"></i> call/text</a></li>
+                      <li><a href="mailto:rukemeniemogha38@gmail.com"><i className="fa-solid fa-envelope"></i>Mail</a></li>
+                    </ul>
+                  </div>
                 </div>
+            
                 <input id="menu-toggle" type="checkbox" />
                 <label className='menu-button-container' htmlFor="menu-toggle">
                 <div className='menu-button'></div>

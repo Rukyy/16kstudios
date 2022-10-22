@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import CategortSection from "./categorysection";
 
 const Home = () => {
    
@@ -13,18 +13,18 @@ const Home = () => {
             <div className="latest container">
                 <div><h2>Latest</h2></div>
                 <div id="carouselExampleControls" className="carousel slide container" data-bs-ride="carousel">
-                        <div className="carousel-inner ">
-                            <div className="carousel-item active">
-                                <a href="/Bg.jpg"><img src="/Bg.jpg"  alt="..."/></a>
-                                <a href="/pic5.jpg"><img src="/pic5.jpg"  alt="..."/></a>
-                                <a href="/pic4.jpg"><img src="/pic4.jpg" alt="..."/></a>
-                                <a href="/pic1.jpg"><img src="/pic1.jpg" alt="" /></a>
+                        <div className="carousel-inner  ">
+                            <div className="carousel-item active fixed-div">
+                                <a href="/photos/Bg.jpg"><img src="/photos/Bg.jpg"  alt="..."/></a>
+                                <a href="/photos/pic2.jpg"><img src="/photos/pic2.jpg"  alt="..."/></a>
+                                <a href="/photos/pic4.jpg"><img src="/photos/pic4.jpg" alt="..."/></a>
+                                <a href="/photos/pic1.jpg"><img src="/photos/pic1.jpg" alt="" /></a>
                             </div>
                             <div className="carousel-item">
-                                <a href="/pic5.jpg"></a><img src="/pic5.jpg"  alt="..."/>
-                                <a href="/out2.jpg"></a><img src="/out2.jpg" alt="" />
-                                <a href="IMG_9150.jpg"></a><img src="/IMG_9150.jpg" alt="" />
-                                <a href="in2.jpg"></a><img src="/in2.jpg" alt="" />
+                                <a href="/photos/pic5.jpg"><img src="/photos/pic5.jpg"  alt="..."/></a>
+                                <a href="/photos/out2.jpg"><img src="/photos/out2.jpg" alt="" /></a>
+                                <a href="/photos/IMG_9150.jpg"><img src="/photos/IMG_9150.jpg" alt="" /></a>
+                                <a href="/photos/in2.jpg"><img src="/photos/in2.jpg" alt="" /></a>
                             </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -37,7 +37,8 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-
+            <CategortSection />
+            <hr className="footer-line" />
         </div>
         
      );
