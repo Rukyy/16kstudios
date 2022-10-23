@@ -6,9 +6,13 @@ const Home = () => {
         <div className="home">
 
             <div id="welcome">
-                <hr id="short-dash" />
-                <h2 className="welcome-header">Welcome</h2>
-                <h4>welcome to the <em>16k_studio Empire</em>. <br/> We are happy to have on board and look forward to capturing the great moments of your lives. </h4>
+                <div id="line"></div>
+                <div>
+                    <hr id="short-dash" />
+                    <h2 className="welcome-header">Welcome</h2>
+                    <h5 className="welcome-writeup">welcome to the <em>16k_studio Empire</em>. <br/> We are happy to have on board and look forward to capturing the great moments of your lives. </h5>
+                </div>
+                <div id="line2"></div>
             </div>
             <div className="latest container">
                 <div><h2>Latest</h2></div>
